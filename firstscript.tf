@@ -1,10 +1,19 @@
+resource "aws_vpc" "my_vpc"{
+    cidr_block = var.vpc_cidr
+
+    tags = {
+        Name = "managed_vpc"
+    }
+}
+
+
 resource "aws_instance" "web" {
-  ami = "ami-04a81a99f5ec58529"
-  instance_type = "t2.micro"
-  key_name = "capstone-key"
+  ami = var.ami
+  instance_type = var.instance_type
+  key_name = var.key_name
   count = 3
 
   tags = {
-    Name = "managed_none ${count.index}"
+    Name = "${var.project_name}-${count.index}"
   } 
 }
