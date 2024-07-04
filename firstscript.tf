@@ -104,7 +104,6 @@ resource "aws_instance" "web" {
   instance_type     = var.instance_type
   key_name          = var.key_name
   availability_zone = var.az
-  count             = 3
 
 
   network_interface {
