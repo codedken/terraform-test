@@ -119,6 +119,6 @@ resource "aws_instance" "web" {
               sudo systemctl restart apache2
               EOF
   tags = {
-    Name = "${var.project_name}-${count.index}"
+    Name = "${var.project_name}-web"
   }
 }
