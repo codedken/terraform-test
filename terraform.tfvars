@@ -1,4 +1,4 @@
-project_name = "dev"
+project_name = "kenbuzor"
 region = "us-east-1"
 az = "us-east-1a"
 instance_type = "t2.micro"
